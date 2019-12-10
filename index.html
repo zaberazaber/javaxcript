@@ -1,51 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JavaScript in 14 minutes by Jeremy Thomas</title>
-    <link rel="stylesheet" href="../css/main.min.css?v=201912101216">
-    <meta property="og:url" content="http://localhost:4000">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JavaScript in 14 minutes">
-<meta property="og:image" content="http://localhost:4000/images/javascript-in-14-minutes.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:description" content="Learn the basics of JavaScript in 14 minutes with this interactive tutorial! 😃">
+---
+layout: default
+---
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@jgthms">
-<meta name="twitter:creator" content="@jgthms">
-<meta name="twitter:title" content="JavaScript in 14 minutes">
-<meta name="twitter:image" content="http://localhost:4000/images/javascript-in-14-minutes.png">
-<meta name="twitter:description" content="Learn the basics of JavaScript in 14 minutes with this interactive tutorial! 😃">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/favicons/apple-touch-icon.png?v=20180315">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/favicons/favicon-32x32.png?v=20180315">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/favicons/favicon-16x16.png?v=20180315">
-<link rel="manifest" href="http://localhost:4000/favicons/site.webmanifest?v=20180315">
-<link rel="mask-icon" href="http://localhost:4000/favicons/safari-pinned-tab.svg?v=20180315" color="#ffe270">
-<link rel="shortcut icon" href="http://localhost:4000/favicons/favicon.ico?v=20180315">
-<meta name="msapplication-TileColor" content="#ffe270">
-<meta name="msapplication-config" content="http://localhost:4000/favicons/browserconfig.xml?v=20180315">
-<meta name="theme-color" content="#ffe270">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82634666-8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-82634666-8');
-</script>
-
-  </head>
-  <body>
-    <main class="main">
-      <header class="header">
+<header class="header">
   <h1 class="title">JavaScript</h1>
   <p class="subtitle">by <a>Mohammad Zubair</a></p>
 
@@ -179,43 +136,14 @@
     <p>In the console, type (or paste) the following, and press <kbd class="key">Enter</kbd></p>
   </div>
 
-  
-  <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello World!</span><span class="dl">'</span><span class="p">)</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+  {% capture snippet %}{% include snippets/snippet_hello_world.md %}{% endcapture %}
+  {% include partials/snippet.html contents=snippet %}
 </div>
 
 <!-- 02 -->
 <div id="step2" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Great job!</h2>
-
-
+    {% include partials/gj.html %}
     <p>You've just used <code>alert()</code>, a native <strong>JavaScript function</strong> that comes with every browser.</p>
 
     <p>But what have you <a onclick="showStep(3);">done exactly</a>?</p></div>
@@ -292,43 +220,14 @@
     <p>Type or paste the following snippet in your console:</p>
   </div>
 
-  
-  <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="mi">9</span><span class="o">+</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+  {% capture snippet %}{% include snippets/snippet_numbers.md %}{% endcapture %}
+  {% include partials/snippet.html contents=snippet %}
 </div>
 
 <!-- 06 -->
 <div id="step6" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Perfect!</h2>
-
-
+    {% include partials/gj.html title="Perfect!" %}
 
     <p>Notice a few things:</p>
 
@@ -352,44 +251,15 @@
 
     <p>Type the following:</p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">)</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_innerwidth.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 08 -->
 <div id="step8" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Wonderful!</h2>
-
-
+    {% include partials/gj.html title="Wonderful!" %}
 
     <p>
       This means your browser's window is <strong id="browserWidth">1680</strong> pixels wide.
@@ -441,44 +311,15 @@
 
     <p>For example, the <code>href</code> property exists:</p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_href.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 11 -->
 <div id="step11" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Awesome!</h2>
-
-
+    {% include partials/gj.html title="Awesome!" %}
 
     <p>You just displayed the <strong>full URL</strong> of this webpage. This is because:</p>
 
@@ -509,44 +350,15 @@
 
     <p>Actually, the <code>alert()</code> function we've been using so far is a method of the <code>window</code> object!</p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">OMG</span><span class="dl">'</span><span class="p">)</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_omg.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 13 -->
 <div id="step13" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- OMG indeed!</h2>
-
-
+    {% include partials/gj.html title="OMG indeed!" %}
 
     <p>
       Since <code>window</code> is the top-level object in the browser, you can access all its properties and methods directly.
@@ -578,44 +390,15 @@
     <p>A JavaScript <strong>array</strong> is a type that can contain multiple values, as if they were in an ordered list.</p>
 
     <p>Let's pass an array of <strong>3 strings</strong> to the <code>alert()</code> function:</p>
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">([</span><span class="dl">'</span><span class="s1">What</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">is</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">up</span><span class="dl">'</span><span class="p">])</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_what_is_up.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 15 -->
 <div id="step15" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Exactly!</h2>
-
-
+    {% include partials/gj.html title="Exactly!" %}
 
     <p>
       You already know the syntax for calling the <code>alert</code> function: <code>alert(argument)</code>.
@@ -656,44 +439,15 @@
       Try out this snippet:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">([</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">])</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_list.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 16 -->
 <div id="step16" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- True!</h2>
-
-
+    {% include partials/gj.html title="True!" %}
 
     <p>
       The first item <code>2 + 5</code> is a number, while the second one <code>'Bravo'</code> is a string.
@@ -738,18 +492,8 @@
       A variable is a <strong>container</strong> that stores a certain <strong>value</strong>. It has a <strong>name</strong> (so you can identify and re-use it), and it has a <strong>value</strong> (so you can update it later on).
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-</code></pre></div></div>
-
-  </div>
-  
-</div>
-
-
-
+    {% capture snippet %}{% include snippets/snippet_array.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet skipRun=true %}
 
     <ul>
       <li>
@@ -799,45 +543,15 @@
       Since we now have <em>two statements</em>, we need to separate them with a <strong>semicolon</strong> <code>;</code> in order to know where one ends and the next one begins.
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">);</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_array_alert.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 19 -->
 <div id="step19" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Wonderful!</h2>
-
-
+    {% include partials/gj.html title="Wonderful!" %}
 
     <p>
       By storing our array into a variable, we managed to make our code more <strong>readable</strong>.
@@ -869,45 +583,15 @@
       Can you guess which item is gonna be displayed?
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_array_index.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 20 -->
 <div id="step20" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- You guessed it!</h2>
-
-
+    {% include partials/gj.html title="You guessed it!" %}
 
     <p>
       It's the <strong>second item</strong> that showed up! In programming, indexes start at zero <code>0</code>.
@@ -940,45 +624,15 @@
       For example, <code>my_things</code> has a property called <code>length</code>:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_array_length.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 21 -->
 <div id="step21" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- That's right!</h2>
-
-
+    {% include partials/gj.html title="That's right!" %}
 
     <p>
       The array has <strong>3</strong> items. You'll see that if you add or remove items in <code>my_things</code>, this <code>length</code> value will change accordingly.
@@ -988,47 +642,15 @@
       While readability and properties are useful, the main point of a variable is that it's <strong>editable</strong>: you can change the value afterwards!
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">);</span>
-<span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">'</span><span class="s1">LOVE</span><span class="dl">'</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">);</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_array_edit.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 22 -->
 <div id="step22" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Yep!</h2>
-
-
+    {% include partials/gj.html title="Yep!" %}
 
     <p>
       Two alert boxes have been displayed, but with different values! That's because between the first call and the second one, the value of <code>my_things</code> has been <strong>updated</strong>: a fourth item, the string <code>'LOVE'</code>, was added.
@@ -1046,47 +668,15 @@
       Do you remember I told you variables had <strong>methods</strong> too (since they're objects)? Another way to edit an array's value is by using the <code>push()</code> method:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">);</span>
-<span class="nx">my_things</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">The Button</span><span class="dl">'</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">);</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_array_push.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 23 -->
 <div id="step23" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Fantastic!</h2>
-
-
+    {% include partials/gj.html title="Fantastic!" %}
 
     <p>
       The <code>my_things</code> array ends up with <strong>4</strong> items.
@@ -1096,45 +686,15 @@
       While the <code>push()</code> method altered the array, others simply <strong>return</strong> a value:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">ninja</span><span class="dl">'</span><span class="p">));</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_array_includes.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 24 -->
 <div id="step24" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- No ninja here!</h2>
-
-
+    {% include partials/gj.html title="No ninja here!" %}
 
     <p>
       The <code>includes()</code> method checked if the string <code>'ninja'</code> was present in the array. Since it wasn't, the method returned <code>false</code>, a <strong>boolean</strong> value.
@@ -1148,44 +708,15 @@
       Here's a "<em>greater than</em>" comparison:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">&gt;</span> <span class="mi">400</span><span class="p">)</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_innerwidth_boolean.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 25 -->
 <div id="step25" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Great again!</h2>
-
-
+    {% include partials/gj.html title="Great again!" %}
 
     <p>
       This means your browser window is <strong id="wider">not</strong> wider than <strong>400 pixels</strong>.
@@ -1245,28 +776,8 @@
       For now, let's trigger an alert box only if you happen to be on my domain!
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hostname</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">javaxcript</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Welcome on my domain! 🤗</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_if.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
 
     <div class="message is-info">
       <div class="message-body">
@@ -1279,18 +790,7 @@
 <!-- 27 -->
 <div id="step27" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Equal indeed!</h2>
-
-
+    {% include partials/gj.html title="Equal indeed!" %}
 
     <p>
       We're doing another comparison here, but with the "<em>equal to</em>" operator <code>==</code> instead.
@@ -1339,20 +839,8 @@
       To handle the <strong>opposite case</strong>, when the hostname isn't <code>'javaxcript'</code>, we can use the "<em>not equal to</em>" <strong>operator</strong> <code>!=</code>:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hostname</span> <span class="o">!=</span> <span class="dl">'</span><span class="s1">javaxcript</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Please come back soon! 😉</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-  </div>
-  
-</div>
-
-
-
+    {% capture snippet %}{% include snippets/snippet_if_not.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet skipRun=true %}
 
     <p>
       If you try out this snippet, you'll see that it doesn't trigger anything! (Unless this tutorial has been copied to another domain 😆).
@@ -1362,48 +850,15 @@
       What if we wanted to handle both cases <strong>simultaneously</strong>? We could write two <code>if</code> statements in a row. But since one statement is the <em>exact opposite</em> of the other, we can <strong>combine</strong> them with a <code>else</code> statment:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hostname</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">javaxcript</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Welcome on my domain! 🤗</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Please come back soon! 😉</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_if_else.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 28 -->
 <div id="step28" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Still equal!</h2>
-
-
+    {% include partials/gj.html title="Still equal!" %}
 
     <p>With this conditional setup, we can be sure that:</p>
 
@@ -1420,50 +875,15 @@
       By using <code>else if</code> you can add <strong>intermediate</strong> statements and handle multiple cases:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Big screen! 🔥</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">&lt;</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Probably a mobile phone 📱</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Decent size 👍</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_else_if.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 29 -->
 <div id="step29" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- You got it!</h2>
-
-
+    {% include partials/gj.html title="You got it!" %}
 
     <p>
       As soon as one comparison returns <code>true</code>, it will be triggered, and all following statements will be ignored. That's why only one alert box showed up!
@@ -1492,46 +912,15 @@
       Can you guess how many alert boxes this snippet will trigger?
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_loop.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 31 -->
 <div id="step31" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Three it is!</h2>
-
-
+    {% include partials/gj.html title="Three it is!" %}
     <p>
       There were exactly <strong>3</strong> alert boxes! Let's dissect what happened:
     </p>
@@ -1691,47 +1080,15 @@
       By combining these informations, we can devise the following snippet:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">my_things</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="nx">my_things</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_loop_array.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 33 -->
 <div id="step33" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- In a row!</h2>
-
-
+    {% include partials/gj.html title="In a row!" %}
 
     <p>
       One by one, the items of the array were displayed in their own alert box.
@@ -1756,47 +1113,15 @@
       Arrays actually have a <strong>method</strong> called <code>forEach()</code>, which allows to perform a task <em>for each</em> item in the array:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bravo</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-<span class="nx">my_things</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_loop_foreach.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 35 -->
 <div id="step35" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Better!</h2>
-
-
+    {% include partials/gj.html title="Better!" %}
 
     <p>
       Note a few improvements:
@@ -1868,48 +1193,15 @@
       Let's <strong>create</strong> a function called <code>greet()</code>, with <strong>1</strong> parameter called <code>name</code>, and then immediately <strong>call</strong> it:
     </p>
 
-    
-    <div class="snippet">
-  <div class="snippet-contents">
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hey there </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">greet</span><span class="p">(</span><span class="dl">'</span><span class="s1">Alex</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div></div>
-
-  </div>
-  
-    <a class="snippet-copy not-mobile not-tablet">
-      Copy to clipboard
-    </a>
-  
-</div>
-
-
-<div class="run-snippet case is-mobile is-tablet">
-  <a class="button">Run snippet</a>
-</div>
-
-
+    {% capture snippet %}{% include snippets/snippet_greet.md %}{% endcapture %}
+    {% include partials/snippet.html contents=snippet %}
   </div>
 </div>
 
 <!-- 37 -->
 <div id="step37" class="step">
   <div class="content">
-    
-  <h2 class="gj"><div class="check">
-  <div class="check-circle"></div>
-  <svg class="check-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <polyline stroke="#65B280" stroke-width="4" points="11 19 18 26 29 14"></polyline>
-    </g>
-  </svg>
-</div>
- Greetings!</h2>
-
-
+    {% include partials/gj.html title="Greetings!" %}
 
     <p>
       You've created your first function! It's a simple one but it can teach you a lot.
@@ -2034,8 +1326,7 @@
   <div class="content">
     <h2>Keep Learning 😍</h2>
       <a class="share is-github" href="https://github.com/zaberazaber" target="_blank">
-        <span><svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="https://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg>
-</span>
+        <span>{% include icons/github.html %}</span>
         <em>Star on</em>
         <strong>GitHub</strong>
       </a>
@@ -2085,17 +1376,3 @@
     </div>
   </div>
 </aside>
-
-    </main>
-    <script src="../vendor/bowser-1.9.3.min.js"></script>
-    <script src="../vendor/js.cookie-2.1.4.min.js"></script>
-    <script src="../vendor/clipboard-2.0.0.min.js"></script>
-    <script src="../vendor/lazyload-2.0.0-beta.2.min.js"></script>
-    <script type="text/javascript">
-      ;(function() {
-        lazyload();
-      })();
-    </script>
-    <script src="../lib/main.js?v=201912101216"></script>
-  </body>
-</html>
